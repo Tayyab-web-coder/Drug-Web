@@ -27,6 +27,10 @@ header {
     width: 100%;
     height: 10vh;
     background: #3275DB;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 999;
 }
 
 
@@ -34,6 +38,7 @@ header nav {
     display: flex;
     justify-content: space-between;
     padding: 0px 50px;
+   
 }
 
 header nav .logo {
@@ -102,6 +107,7 @@ ul li a.active {
         left: -100%;
         box-shadow: 0px 0px 5px rgb(0, 0, 0, 0.1);
         transition: 0.5s ease-in-out;
+        z-index: 999;
     }
 
     ul.show {
@@ -112,18 +118,21 @@ ul li a.active {
 
  .hero{
     width: 100%;
-    height: 100vh;
-    background-image: url(/images/How\ to\ Find\ a\ Children’s\ Mental\ Health\ Professional\ -\ Child\ Mind\ Institute.jfif);
+    height: 90vh;
+    background-image: url(/images/8056e5f46c88b432ea4ea35cd75fb5f6.jpg); 
     background-size: cover;
     object-fit: cover;
-    position: relative;
+     position: relative; 
+     z-index: -1;
 }
 .hero::before{
 content: '';
-position: absolute;
+ position: absolute; 
 width: 100%;
-height: 100vh;
-/* background: linear-gradient(rgba(5, 56, 120, 0.5), rgba(3, 44, 114, 0.5)); */
-/* background: rgba(5, 56, 120, 0.5); */
-z-index: 0;
-} 
+height: 100%;
+background: linear-gradient(rgba(5, 56, 120, 0.5), rgba(3, 44, 114, 0.5));
+z-index: -1;
+}  
+.hero-content{
+    z-index: 88;
+}
