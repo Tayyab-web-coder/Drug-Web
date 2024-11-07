@@ -21,6 +21,27 @@ body {
     /* 1rem = 16px */
 }
 
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('/fonts/Roboto-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat-ExtraBold.ttf');
+}
+
+@font-face {
+    font-family: 'MontserratLight';
+    src: url('/fonts/Montserrat-Light.ttf');
+}
+
+
 /* Header */
 
 header {
@@ -38,7 +59,7 @@ header nav {
     display: flex;
     justify-content: space-between;
     padding: 0px 50px;
-   
+
 }
 
 header nav .logo {
@@ -116,27 +137,67 @@ ul li a.active {
 
 }
 
- .hero{
+.hero {
     width: 100%;
     height: 90vh;
-    background-image: url(/images/8056e5f46c88b432ea4ea35cd75fb5f6.jpg); 
+    background-image: url(/images/HeroSection.webp);
     background-size: cover;
     object-fit: cover;
-     position: relative; 
-     z-index: -1;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     text-align: center;
+    position: relative;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
-.hero::before{
-content: '';
- position: absolute; 
-width: 100%;
-height: 100%;
-background: linear-gradient(rgba(5, 56, 120, 0.5), rgba(3, 44, 114, 0.5));
-z-index: -1;
-}  
-.hero-content{
 
+.hero::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(5, 56, 120, 0.5), rgba(3, 44, 114, 0.5));
+    z-index: -1;
+}
+
+.hero-content {
+    color: white;
+}
+
+.hero-content h1 {
+    font-family: 'Montserrat';
+    font-size: 3rem;
+    line-height: 1.2;
+}
+
+.hero-content h4 {
+    font-family: 'MontserratLight';
+    font-size: 1.5rem;
+    line-height: 1.4;
+}
+
+.hero-btn {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content .hero-btn button {
+    margin-top: 30px;
+    width: 160px;
+    height: 50px;
+    background: #3275DB;
+    border: none;
+    font-family: 'Roboto';
+    color: white;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    font-weight: 900;
+    cursor: pointer;
+    letter-spacing: 1.5px;
+}
+ .hero-btn:hover button{
+background: transparent;
+color: black;
 }
