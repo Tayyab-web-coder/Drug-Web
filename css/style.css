@@ -11,6 +11,11 @@ body {
     height: 100%;
 }
 
+button,
+i {
+    cursor: pointer;
+}
+
 *::selection {
     background: white;
     color: #3275DB;
@@ -58,7 +63,7 @@ header {
 header nav {
     display: flex;
     justify-content: space-between;
-    padding: 0px 50px;
+    padding: 0px 35px;
 
 }
 
@@ -75,7 +80,7 @@ header nav .logo a {
 
 header nav ul {
     display: flex;
-    gap: 40px;
+    gap: 30px;
     padding-top: 25px;
 }
 
@@ -140,11 +145,11 @@ ul li a.active {
 .hero {
     width: 100%;
     height: 90vh;
-    background-image: url(/images/HeroSection.webp);
+    background-image: url(/images/HeroSection.jpg);
     background-size: cover;
     object-fit: cover;
     position: relative;
-    z-index: -1;
+    z-index: 1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -183,21 +188,33 @@ ul li a.active {
     justify-content: center;
 }
 
-.hero-content .hero-btn button {
+.hero-btn button {
     margin-top: 30px;
-    width: 160px;
+    width: 150px;
     height: 50px;
     background: #3275DB;
     border: none;
-    font-family: 'Roboto';
-    color: white;
+    font-family: 'MontserratLight';
     font-size: 1.3rem;
-    border-radius: 5px;
+    border-radius: 7px;
     font-weight: 900;
     cursor: pointer;
     letter-spacing: 1.5px;
+    transition: 0.5s ease-in-out;
+    border: 2px solid #3275DB;
+    outline: none;   
 }
- .hero-btn:hover button{
-background: transparent;
-color: black;
+.hero-btn button a{
+    color: wheat;
+}
+.hero-btn button:nth-child(2){
+    background: transparent;
+}
+.hero-content button:nth-child(2):hover {
+    background: #3275DB;
+    border: 2px solid #3275DB;
+}
+.hero-content button:nth-child(1):hover {
+    background: transparent;
+    border: 2px solid #3275DB;
 }
