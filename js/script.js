@@ -40,4 +40,17 @@ let PlayIcon=document.querySelector('#play')
         video.pause()
         PlayIcon.classList.replace('fa-pause', 'fa-play');
     }
+}); 
+ let CouncellingVideo=document.querySelector('.counceling-content video')
+ let CouncellingPlayIcon=document.querySelector('.counceling-content #play')
+  CouncellingPlayIcon.addEventListener('click', () => {    
+    console.log('gewew');
+    
+    if (CouncellingPlayIcon.classList.contains('fa-play')) {
+        CouncellingVideo.play()
+        CouncellingPlayIcon.classList.replace('fa-play', 'fa-pause');
+    } else {
+        CouncellingVideo.pause()
+        CouncellingPlayIcon.classList.replace('fa-pause', 'fa-play');
+    }
 });
