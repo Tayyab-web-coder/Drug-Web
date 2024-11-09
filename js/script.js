@@ -23,3 +23,21 @@ window.onload = function() {
     });
  };
  
+
+
+ function toggleFAQ(element) {
+    const faqItem = element.parentElement;
+    faqItem.classList.toggle("active");
+  }
+  
+  let video=document.querySelector('video')
+let PlayIcon=document.querySelector('#play')
+  PlayIcon.addEventListener('click', () => {    
+    if (PlayIcon.classList.contains('fa-play')) {
+        video.play()
+        PlayIcon.classList.replace('fa-play', 'fa-pause');
+    } else {
+        video.pause()
+        PlayIcon.classList.replace('fa-pause', 'fa-play');
+    }
+});
