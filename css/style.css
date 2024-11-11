@@ -1,150 +1,139 @@
+*,
+nav ul li a {
+    text-decoration: none;
+}
+
+header nav .logo a,
+nav ul li a {
+    font-family: Montserrat, sans-serif;
+    font-weight: 700
+}
+
+.hero,
+.hero-btn,
+header nav,
+nav ul {
+    display: flex
+}
+
+.about-content-right video,
+.hero::before,
+body {
+    width: 100%;
+    height: 100%
+}
+
+.ContentHolder::before,
+.hero::before {
+    content: '';
+    position: absolute;
+    z-index: -1
+}
+
+.ContentHolder,
+.counceling-content,
+.hero,
+.swiper-container,
+.testimonail {
+    position: relative
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-}
-
-body {
-    width: 100%;
-    height: 100%;
+    list-style: none
 }
 
 button,
 i {
-    cursor: pointer;
+    cursor: pointer
 }
 
-*::selection {
-    background: white;
-    color: #3275DB;
+::selection {
+    background: #fff;
+    color: #3275db
 }
 
 :root {
-    font-size: 16px;
-    /* 1rem = 16px */
+    font-size: 16px
 }
 
 @font-face {
-    font-family: 'Poppins';
-    src: url('/fonts/Poppins-Light.ttf');
+    font-family: Poppins;
+    src: url('/fonts/Poppins-Light.ttf')
 }
 
 @font-face {
-    font-family: 'Roboto';
-    src: url('/fonts/Roboto-Light.ttf');
+    font-family: Roboto;
+    src: url('/fonts/Roboto-Light.ttf')
 }
 
 @font-face {
-    font-family: 'Montserrat';
-    src: url('/fonts/Montserrat-ExtraBold.ttf');
+    font-family: Montserrat;
+    src: url('/fonts/Montserrat-ExtraBold.ttf')
 }
 
 @font-face {
-    font-family: 'MontserratLight';
-    src: url('/fonts/Montserrat-Light.ttf');
+    font-family: MontserratLight;
+    src: url('/fonts/Montserrat-Light.ttf')
 }
-
-
-/* Header */
 
 header {
     width: 100%;
     height: 10vh;
-    background: #3275DB;
+    background: #3275db;
     position: sticky;
     top: 0;
     left: 0;
-    z-index: 999;
+    z-index: 999
 }
 
-
 header nav {
-    display: flex;
     justify-content: space-between;
-    padding: 0px 75px;
+    padding: 0 75px
 }
 
 header nav .logo {
-    padding-top: 13px;
+    padding-top: 13px
 }
 
 header nav .logo a {
-    font-family: 'Montserrat', sans-serif;
-    color: white;
-    font-weight: 700;
-    font-size: 2rem;
+    color: #fff;
+    font-size: 2rem
 }
 
 header nav ul {
     display: flex;
     gap: 30px;
-    padding-top: 25px;
+    padding-top: 25px
 }
 
 nav ul {
-    display: flex;
-    gap: 25px;
+    gap: 25px
 }
 
-
 nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
+    color: #fff;
     font-size: 1rem;
     text-transform: capitalize;
-    transition: 0.3s ease-in-out;
+    transition: .3s ease-in-out
 }
 
 nav ul li a:hover {
-    color: #c9eef8;
+    color: #c9eef8
 }
 
 nav ul li a.active {
-    border-bottom: 2px solid white;
-    font-weight: bold;
+    border-bottom: 2px solid #fff;
+    font-weight: 700
 }
 
 #hamburger {
     display: none;
     padding-top: 20px;
     font-size: 2rem;
-    color: white;
-}
-
-@media (max-width:768px) {
-    header nav {
-        display: flex;
-        justify-content: space-between;
-        padding: 0px 25px;
-    }
-
-    #hamburger {
-        display: block;
-    }
-
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-        background: #3275DB;
-        position: fixed;
-        top: 64px;
-        left: -100%;
-        box-shadow: 0px 0px 5px rgb(0, 0, 0, 0.1);
-        transition: 0.5s ease-in-out;
-        z-index: 999;
-    }
-
-    nav ul.show {
-        left: 0;
-    }
-
+    color: #fff
 }
 
 .hero {
@@ -153,96 +142,91 @@ nav ul li a.active {
     background-image: url(/images/herosection.jpg);
     background-size: cover;
     object-fit: cover;
-    position: relative;
     z-index: 1;
-    display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    text-align: center
 }
 
 .hero::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(5, 56, 120, 0.5), rgba(3, 44, 114, 0.5));
-    z-index: -1;
+    background: linear-gradient(rgba(5, 56, 120, .5), rgba(3, 44, 114, .5))
 }
 
+.hero-btn button a,
 .hero-content {
-    color: white;
+    color: #fff
 }
 
 .hero-content h1 {
-    font-family: 'Montserrat';
+    font-family: Montserrat;
     font-size: 3rem;
-    line-height: 1.2;
+    line-height: 1.2
 }
 
 .hero-content h4 {
-    font-family: 'MontserratLight';
+    font-family: MontserratLight;
     font-size: 1.5rem;
-    line-height: 1.4;
+    line-height: 1.4
 }
 
 .hero-btn {
-    display: flex;
     gap: 20px;
     align-items: center;
-    justify-content: center;
+    justify-content: center
+}
+
+.get-help,
+.get-help-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column
 }
 
 .hero-btn button {
     margin-top: 30px;
     width: 150px;
     height: 50px;
-    background: #3275DB;
-    border: none;
-    font-family: 'MontserratLight';
+    background: #3275db;
+    border: 2px solid #3275db;
+    font-family: MontserratLight;
     font-size: 1.3rem;
     border-radius: 7px;
     font-weight: 900;
     cursor: pointer;
     letter-spacing: 1.5px;
-    transition: 0.5s ease-in-out;
-    border: 2px solid #3275DB;
-    outline: none;
+    transition: .5s ease-in-out;
+    outline: 0
 }
 
-.hero-btn button a {
-    color: white;
+.get-help-card h1,
+.get-help-card h4,
+.section-header h1 {
+    font-family: Montserrat;
+    font-weight: 700;
+    color: #273044
 }
 
 .hero-btn button:nth-child(2) {
-    background: transparent;
+    background: 0 0
 }
 
 .hero-content button:nth-child(2):hover {
-    background: #3275DB;
-    border: 2px solid #3275DB;
+    background: #3275db;
+    border: 2px solid #3275db
 }
 
-.hero-content button:nth-child(1):hover {
-    background: transparent;
-    border: 2px solid #3275DB;
+.hero-content button:first-child:hover {
+    background: 0 0;
+    border: 2px solid #3275db
 }
-
-/*  */
 
 .get-help {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding-top: 50px;
+    padding-top: 50px
 }
 
 .section-header h1 {
-    font-family: 'Montserrat';
-    font-weight: 700;
     font-size: 2.3rem;
-    color: #273044;
-    width: auto;
+    width: auto
 }
 
 .get-help-cards {
@@ -250,8 +234,7 @@ nav ul li a.active {
     flex-wrap: wrap;
     justify-content: center;
     gap: 25px;
-    padding: 60px 55px;
-
+    padding: 60px 55px
 }
 
 .get-help-card {
@@ -259,79 +242,65 @@ nav ul li a.active {
     height: auto;
     padding: 50px 0;
     border-radius: 25px;
-    text-align: center;
-    background: white;
-    display: flex;
-    flex-direction: column;
+    background: #fff;
     align-items: center;
     justify-content: center;
     gap: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    transition: all 0.56s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .2);
+    transition: .56s ease-in-out
 }
 
-.get-help-card h1 {
-    font-family: 'Montserrat';
-    font-weight: 700;
-    font-size: 1.3rem;
-    color: #273044;
+.swiper-container,
+.swiper-slide {
+    border-radius: 5px;
+    overflow: hidden
 }
 
-.get-help-card h4 {
-    font-family: 'Montserrat';
-    font-weight: 700;
-    font-size: 1rem;
-    color: #273044;
-}
-
-
-.get-help-card:hover {
-    transform: translateY(-12px);
-}
-
-@media (max-width:768px) {
-    .get-help-cards {
-        padding: 60px 0px;
-    }
-
-}
-
-/* About */
-
-.about {
-    display: flex;
+.about,
+.counceling {
     flex-direction: column;
     text-align: center;
     gap: 35px;
-    padding: 50px 75px;
-    min-height: 80vh;
+    display: flex
 }
 
-.about-content {
-    display: flex;
+.get-help-card h1 {
+    font-size: 1.3rem
+}
+
+.get-help-card h4 {
+    font-size: 1rem
+}
+
+.get-help-card:hover {
+    transform: translateY(-12px)
+}
+
+.about {
+    padding: 50px 75px;
+    min-height: 80vh
+}
+
+.about-content,
+.footer-subscribe form {
+    display: flex
 }
 
 .about-content-left {
-    width: 50%;
+    width: 50%
 }
 
 .about-content-left p {
-    font-family: 'MontserratLight';
+    font-family: MontserratLight;
     font-weight: 900;
     font-size: 1rem;
     color: #273044;
-    text-align: left;
+    text-align: left
 }
 
 .about-content-right {
     width: 50%;
-    position: relative;
-}
-
-.about-content-right video {
-    width: 100%;
-    height: 100%;
-
+    position: relative
 }
 
 .about-content-right .video-icon {
@@ -342,55 +311,31 @@ nav ul li a.active {
     width: 100px;
     height: 100px;
     background: #3276db7d;
-    border-radius: 50%;
+    border-radius: 50%
 }
 
-.about-content-right .video-icon i {
-    color: white;
+.about-content-right .video-icon i,
+.counceling-content .video-icon i {
+    color: #fff;
     font-size: 2.5rem;
     padding-top: 30px;
-    padding-left: 5px;
+    padding-left: 5px
 }
-
-@media (max-width:768px) {
-    .about {
-        padding: 50px 25px;
-    }
-
-    .about-content {
-        flex-direction: column;
-    }
-
-    .about-content-left {
-        width: 100%;
-    }
-
-    .about-content-right {
-        width: 100%;
-    }
-}
-
-/* Councelling */
 
 .counceling {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    gap: 35px;
     padding: 50px 75px;
-    height: 100vh;
+    height: 100vh
 }
 
 .counceling-content {
     width: 100%;
-    height: 100%;
-    position: relative;
+    height: 100%
 }
 
 .counceling-content video {
     width: 100%;
     object-fit: cover;
-    height: 70%;
+    height: 70%
 }
 
 .counceling-content .video-icon {
@@ -401,26 +346,7 @@ nav ul li a.active {
     width: 100px;
     height: 100px;
     background: #3276db7d;
-    border-radius: 50%;
-}
-
-.counceling-content .video-icon i {
-    color: white;
-    font-size: 2.5rem;
-    padding-top: 30px;
-    padding-left: 5px;
-}
-
-@media (max-width:768px) {
-    .counceling {
-        padding: 20px 25px 70px 25px;
-    }
-
-    .counceling-content video {
-        width: 100%;
-        object-fit: cover;
-        height: 100%;
-    }
+    border-radius: 50%
 }
 
 .faq-container {
@@ -430,136 +356,179 @@ nav ul li a.active {
     flex-direction: column;
     margin: auto;
     gap: 40px;
-    padding: 0px 75px;
+    padding: 0 75px
+}
+
+.faq-answer,
+.faq-question {
+    padding: 15px;
+    font-weight: 700;
+    color: #273044
 }
 
 .faq-item {
     border-bottom: 1px solid #ddd;
-    margin-bottom: 10px;
+    margin-bottom: 10px
 }
 
 .faq-question {
-    padding: 15px;
     cursor: pointer;
-    font-weight: bold;
     display: flex;
-    color: #273044;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid rgb(237, 234, 234);
-    transition: 0.3s ease;
+    border-bottom: 1px solid #edeaea;
+    transition: .3s
 }
 
 .faq-question h2 {
     font-size: 1.3rem;
-    font-family: 'Poppins';
-    font-weight: 900;
+    font-family: Poppins;
+    font-weight: 900
 }
 
 .faq-question i {
-    background: rgb(237, 234, 234);
+    background: #edeaea;
     padding: 10px;
     border-radius: 50%;
-    font-size: 1.2rem;
+    font-size: 1.2rem
 }
-
 
 .faq-answer {
     display: none;
-    padding: 15px;
-    font-weight: 700;
-    font-family: 'Poppins';
-    color: #273044;
+    font-family: Poppins;
     text-align: left;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #ddd
 }
 
-/* Show the answer when active */
 .faq-item.active .faq-answer {
-    display: block;
+    display: block
 }
 
 .faq-item.active .faq-question {
-    border-bottom: none;
+    border-bottom: none
 }
 
 .faq-item.active i {
-    transform: rotate(180deg);
+    transform: rotate(180deg)
 }
 
 @media (max-width:768px) {
+    header nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 25px
+    }
+
+    #hamburger {
+        display: block
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background: #3275db;
+        position: fixed;
+        top: 64px;
+        left: -100%;
+        box-shadow: 0 0 5px rgb(0, 0, 0, .1);
+        transition: .5s ease-in-out;
+        z-index: 999
+    }
+
+    nav ul.show {
+        left: 0
+    }
+
+    .get-help-cards {
+        padding: 60px 0
+    }
+
+    .about {
+        padding: 50px 25px
+    }
+
+    .about-content {
+        flex-direction: column
+    }
+
+    .about-content-left,
+    .about-content-right {
+        width: 100%
+    }
+
+    .counceling {
+        padding: 20px 25px 70px
+    }
+
+    .counceling-content video {
+        width: 100%;
+        object-fit: cover;
+        height: 100%
+    }
+
     .faq-container {
         width: 100%;
-        padding: 0px 30px;
+        padding: 0 30px
     }
 }
 
 @media (max-width:400px) {
     .faq-container {
-        padding: 0;
+        padding: 0
     }
 
     .faq-question {
-        padding: 5px;
+        padding: 5px
     }
 }
 
 .testimonail {
     display: grid;
     place-items: center;
-    position: relative;
     height: 80vh;
     padding-top: 40px;
-    text-align: center;
+    text-align: center
 }
 
 .swiper-container {
-    border-radius: 5px;
     width: 70vw;
-    overflow: hidden;
     height: fit-content;
-    position: relative;
-    padding-bottom: 50px;
+    padding-bottom: 50px
 }
 
 .swiper-slide {
     width: auto;
-    height: fit-content;
     display: flex;
     height: auto;
-    border-radius: 5px;
-    overflow: hidden;
     align-items: flex-start;
     flex-direction: column;
-    background: rgb(251, 249, 249);
+    background: #fbf9f9
 }
 
 .swiper-slide .ImgHolder {
-    background-color: #3275DB;
+    background-color: #3275db;
     display: flex;
     width: 100%;
     height: auto;
     padding: 30px;
-    border-bottom-left-radius: 20px;
-
+    border-bottom-left-radius: 20px
 }
 
 .ContentHolder::before {
-    background-color: #3275DB;
-    content: '';
+    background-color: #3275db;
     width: 50px;
     height: 50px;
-    position: absolute;
     top: -5px;
-    z-index: -1;
-    right: 0px;
+    right: 0
 }
 
 .ContentHolder {
-    position: relative;
     padding: 10px;
-    background: rgb(251, 249, 249);
-    border-top-right-radius: 20px;
+    background: #fbf9f9;
+    border-top-right-radius: 20px
 }
 
 .swiper-slide img {
@@ -569,58 +538,51 @@ nav ul li a.active {
     margin: auto;
     object-fit: cover;
     border: 3px solid #4361ee;
-    outline: 2px solid rgb(251, 249, 249);
+    outline: rgb(251, 249, 249) solid 2px
 }
 
 .swiper-slide h2 {
     font-size: 1.1rem;
     text-align: center;
-    font-family: 'Poppins';
-    font-weight: 900;
+    font-family: Poppins;
+    font-weight: 900
 }
 
 .swiper-slide p {
-    font-size: 0.8rem;
+    font-size: .8rem;
     padding: 5px;
-    font-family: 'Poppins';
-    font-weight: 600;
+    font-family: Poppins;
+    font-weight: 600
 }
 
 @media (max-width:768px) {
     .swiper-container {
-        width: 100%;
+        width: 100%
     }
 }
 
 @media (max-width:500px) {
     .swiper-container {
-        width: 70vw;
+        width: 70vw
     }
 }
 
 @media (max-width:300px) {
     .swiper-container {
-        width: 100%;
+        width: 100%
     }
 
+    .ContentHolder,
+    .swiper-container .ImgHolder,
     .swiper-slide {
-        border-radius: 0px;
-    }
-
-    .swiper-container .ImgHolder {
-        border-radius: 0px;
-    }
-
-    .ContentHolder {
-        border-radius: 0px;
+        border-radius: 0
     }
 }
 
-
 .contact-us {
-    background-color: white;
+    background-color: #fff;
     border-radius: 7px;
-    box-shadow: 0 0px 2px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 2px rgba(0, 0, 0, .25);
     width: 768px;
     margin: auto;
     max-width: 100%;
@@ -628,46 +590,46 @@ nav ul li a.active {
     min-width: 370px;
     display: flex;
     overflow: hidden;
-    justify-content: center;
+    justify-content: center
 }
 
-.left-container {
-    width: 50%;
-    background: #3275DB;
-    overflow: hidden;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: white;
-}
-
+.left-container,
 .right-container {
     width: 50%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 0px 40px;
+    text-align: center
 }
 
+.left-container {
+    background: #3275db;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff
+}
+
+.right-container {
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px
+}
 
 .left-container h2 {
-    font-family: 'Montserrat';
+    font-family: Montserrat;
     font-size: 2rem;
-    padding-bottom: 20px;
+    padding-bottom: 20px
 }
 
 .left-container p {
-    font-family: 'MontserratLight';
+    font-family: MontserratLight;
     font-weight: 900;
-    font-size: 1rem;
+    font-size: 1rem
 }
 
 .right-container h2 {
-    font-family: 'Montserrat';
+    font-family: Montserrat;
     font-size: 2rem;
-    padding-bottom: 15px;
+    padding-bottom: 15px
 }
 
 input,
@@ -677,58 +639,62 @@ textarea {
     padding: 12px 15px;
     margin: 8px 0;
     width: 100%;
-    font-size: 0.8rem;
+    font-size: .8rem
 }
 
 input::placeholder,
 textarea::placeholder {
     color: #273044;
-    font-size: 0.8rem;
-    font-family: 'Poppins';
-    font-weight: 800;
+    font-size: .8rem;
+    font-family: Poppins;
+    font-weight: 800
 }
 
 input:focus,
 textarea:focus {
-    outline: 1px solid #3275DB;
+    outline: #3275DB solid 1px
 }
 
 .right-container button {
     border-radius: 20px;
-    background-color: #3275DB;
-    color: #FFFFFF;
+    background-color: #3275db;
+    color: #fff;
     font-size: 1rem;
-    font-weight: bold;
+    font-weight: 700;
     padding: 12px 45px;
     letter-spacing: 1px;
     text-transform: uppercase;
     transition: transform 80ms ease-in;
     cursor: pointer;
-    outline: none;
+    outline: 0;
     border: none;
-    font-family: 'Montserrat';
-    margin-top: 10px;
+    font-family: Montserrat;
+    margin-top: 10px
+}
+
+.footer-top i,
+.footer-top li,
+.footer-top p {
+    padding-top: 10px
 }
 
 .right-inner-container button:hover {
-    opacity: 0.7;
+    opacity: .7
 }
 
-@media(max-width: 600px) {
-    .left-container {
-        display: none;
-    }
+@media(max-width:600px) {
 
+    .left-container,
     .lg-view {
-        display: none;
+        display: none
     }
 
     .right-container {
-        width: 97%;
+        width: 97%
     }
 }
 
-@media(min-width: 600px) {
+@media(min-width:600px) {
     .sm-view {
         display: none;
     }
@@ -737,75 +703,67 @@ textarea:focus {
 footer {
     width: 100%;
     margin-top: 50px;
-    background: #3275DB;
+    background: #3275db;
     display: flex;
     flex-direction: column;
-    padding: 10px 75px;
+    padding: 15px 75px;
 }
 
 .footer-top {
     display: flex;
     flex-wrap: wrap;
-    gap: 100px;
+    gap: 100px
 }
 
 .footer-top h3 {
-    font-family: 'Montserrat';
-    color: white;
+    font-family: Montserrat;
+    color: #fff;
     font-weight: 900;
     font-size: 1.2rem;
-    padding-bottom: 15px;
+    padding-bottom: 15px
 }
 
+.footer-top a,
+.footer-top p {
+    font-size: 1rem;
+    font-family: MontserratLight;
+    color: #fff;
+    font-weight: 900
+}
 
 .footer-top li {
-    padding-top: 10px;
-    font-weight: 900;
+    font-weight: 900
 }
 
- .footer-top a {
-    color: white;
-    font-family: 'MontserratLight';
-    font-size: 1rem;
-    font-weight: 900;
-}
-.footer-top p {
-    color: white;
-    font-family: 'MontserratLight';
-    font-size: 1rem;
-    font-weight: 900;
-    padding-top: 10px;
-}
-.footer-top i{
+.footer-top i {
     font-size: 23px;
-padding-right: 10px;
-padding-top: 10px;
-
+    padding-right: 10px
 }
-footer span{
+
+footer span {
     width: 100%;
     height: 1.7px;
-    background: white;
-    margin: 20px 0px;
+    background: #fff;
+    margin: 20px 0
 }
-.footer-subscribe form{
-    display: flex;
-}
-.footer-subscribe form button{
+
+.footer-subscribe form button {
     background: #4361ee;
     height: 38px;
     margin-top: 8px;
     border: none;
     width: 130px;
-    font-family: 'MontserratLight';
+    font-family: MontserratLight;
     font-weight: 900;
+    color: #fff
+}
+
+.footer-bottom {
+    text-align: center
+}
+
+.footer-bottom p {
+    font-family: MontserratLight;
     color: #fff;
-}
-.footer-bottom{
-    text-align: center;
-}
-.footer-bottom p{
-font-family: 'MontserratLight';
-color: white;
-font-weight: 900;
+    font-weight: 900
 }
