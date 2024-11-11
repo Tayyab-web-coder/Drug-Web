@@ -509,7 +509,8 @@ ul li a.active {
     display: grid;
     place-items: center;
     position: relative;
-    height: 100vh;
+    height: 80vh;
+    padding-top: 40px;
 }
 
 .swiper-container {
@@ -517,10 +518,8 @@ ul li a.active {
     width: 70vw;
     overflow: hidden;
     height: fit-content;
-    font-size: 50px;
     position: relative;
     padding-bottom: 50px;
-    font-family: sans-serif;
 }
 
 .swiper-slide {
@@ -532,7 +531,6 @@ ul li a.active {
     overflow: hidden;
     align-items: flex-start;
     flex-direction: column;
-    padding: 0px;
     background: rgb(251, 249, 249);
 }
 
@@ -564,19 +562,17 @@ ul li a.active {
     border-top-right-radius: 20px;
 }
 
-.swiper-pagination-bullet {
-    background-color: white;
-    opacity: 1;
+/* .swiper-pagination-bullet {
     border: 1px solid #3275DB;
-}
-
+} */
+/* 
 .swiper-pagination-bullet-active {
     background-color: #4361ee;
-}
+} */
 
-.swiper-button {
+/* .swiper-button {
     border: 1px solid white;
-}
+} */
 
 .swiper-slide img {
     width: 100px;
@@ -585,18 +581,21 @@ ul li a.active {
     margin: auto;
     object-fit: cover;
     border: 3px solid #4361ee;
-    outline: 2px solid white;
+    outline: 2px solid rgb(251, 249, 249);
 }
 
-.swiper-slide h3 {
+.swiper-slide h2 {
     font-size: 1.1rem;
     text-align: center;
-    font-weight: bold;
+    font-family: 'Poppins';
+    font-weight: 900;
 }
 
 .swiper-slide p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     padding: 5px;
+    font-family: 'Poppins';
+    font-weight: 600;
 }
 
 @media (max-width:768px) {
@@ -629,7 +628,7 @@ ul li a.active {
     }
 }
 
-
+/* 
 .container {
     background-color: white;
     border-radius: 5px;
@@ -747,4 +746,4 @@ textarea:focus {
 
 form p {
     text-align: left;
-}
+} */
