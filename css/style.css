@@ -793,5 +793,6 @@ color: #c9eef8;
 @media (max-width:768px) {
     footer{
         gap: 20px;
+        padding: 15px 25px;
     }
 }
