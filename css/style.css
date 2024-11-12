@@ -790,3 +790,8 @@ footer>span {
 .footer-subscribe button:hover{
 color: #c9eef8;
 }
+@media (max-width:768px) {
+    footer{
+        gap: 20px;
+    }
+}
