@@ -282,26 +282,32 @@ nav ul li a.active {
     min-height: 80vh
 }
 
-.about-content,
-.footer-subscribe form {
-    display: flex
+.about-content{
+    display: flex;
+    gap: 20px;
 }
 
 .about-content-left {
-    width: 50%
+    width: 50%;
+    padding-top: 5px;
+
 }
 
 .about-content-left p {
-    font-family: MontserratLight;
+    font-family: Poppins;
     font-weight: 900;
     font-size: 1rem;
     color: #273044;
-    text-align: left
+    text-align: left;
 }
 
 .about-content-right {
     width: 50%;
     position: relative
+}
+
+.about-content-right video {
+    border-radius: 10px;
 }
 
 .about-content-right .video-icon {
@@ -336,7 +342,8 @@ nav ul li a.active {
 .counceling-content video {
     width: 100%;
     object-fit: cover;
-    height: 70%
+    height: 70%;
+    border-radius: 10px;
 }
 
 .counceling-content .video-icon {
@@ -475,7 +482,13 @@ nav ul li a.active {
         padding: 0 30px
     }
 }
-
+@media (max-width:400px) {
+    .hero-content h1 {
+        font-family: Montserrat;
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+}
 @media (max-width:400px) {
     .faq-container {
         padding: 0
@@ -485,6 +498,7 @@ nav ul li a.active {
         padding: 5px
     }
 }
+
 
 .testimonail {
     display: grid;
@@ -587,8 +601,7 @@ nav ul li a.active {
     width: 768px;
     margin: auto;
     max-width: 100%;
-    min-height: 480px;
-    min-width: 370px;
+     min-height: 480px;
     display: flex;
     overflow: hidden;
     margin-top: 50px;
@@ -657,7 +670,7 @@ textarea:focus {
     outline: #3275DB solid 1px
 }
 
-.right-container button {
+.right-container button, .cta button {
     border-radius: 20px;
     background-color: #3275db;
     color: #fff;
@@ -749,7 +762,11 @@ footer>span {
     background: #fff;
     margin: 20px 0
 }
-.footer-subscribe form input{
+.footer-subscribe form {
+    display: flex
+}
+
+.footer-subscribe form input {
     background-color: #ddd;
     border: none;
     padding: 12px 35px;
@@ -757,6 +774,7 @@ footer>span {
     width: 100%;
     font-size: .8rem
 }
+
 .footer-subscribe form button {
     background: #4361ee;
     height: 38px;
@@ -777,29 +795,36 @@ footer>span {
     color: #fff;
     font-weight: 900
 }
-.footer-bottom a{
+
+.footer-bottom a {
     color: #273044;
 }
-.footer-links a:hover{
+
+.footer-links a:hover {
     color: #c9eef8;
 }
-.footer-contact p span:hover{
+
+.footer-contact p span:hover {
     color: #c9eef8;
 }
-.footer-social i:hover{
+
+.footer-social i:hover {
     color: #c9eef8;
 }
-.footer-subscribe button:hover{
-color: #c9eef8;
+
+.footer-subscribe button:hover {
+    color: #c9eef8;
 }
+
 @media (max-width:768px) {
-    footer{
+    footer {
         gap: 20px;
         padding: 15px 25px;
     }
 }
+
 @media (max-width:400px) {
-    footer{
+    footer {
         gap: 10px;
         padding: 15px 10px;
     }
@@ -826,103 +851,326 @@ color: #c9eef8;
     width: 100%;
     height: 100%;
 }
+
 .page-banner h1 {
     font-family: Montserrat;
     font-size: 3.5rem;
     color: white;
     z-index: 2;
-}
-
-h1, h2 {
-    color: #333;
     text-align: center;
 }
 
-section {
-    padding: 20px;
-    margin: 20px 0;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+.mission {
+    width: 100%;
+    min-height: auto;
+    padding: 0 75px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 
-/* Impact Statement */
+.mission img {
+    border-radius: 10px;
+}
+
+.mission-top {
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    gap: 25px;
+}
+
+.mission-top-left {
+    width: 57%;
+}
+
+.mission-top-left h1 {
+    font-family: Montserrat;
+    color: #273044;
+    font-size: 1.7rem;
+    font-weight: 900;
+    padding: 10px 0px 25px 0px;
+}
+
+.mission-top-left p {
+    font-size: 1rem;
+    font-family: Poppins;
+    font-weight: 600;
+}
+
+.mission-top-right {
+    width: 43%;
+}
+
+.mission-top-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mission-bottom {
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    gap: 25px;
+}
+
+.mission-bottom-left {
+    width: 57%;
+    min-height: 100%;
+}
+
+.mission-bottom-right {
+    width: 43%;
+    min-height: 100%;
+}
+
+.mission-bottom-left img,
+.mission-bottom-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width:768px) {
+    .mission {
+        padding: 0px 25px;
+    }
+
+    .mission-top {
+        display: flex;
+        flex-direction: column-reverse;
+
+    }
+
+    .mission-top-left {
+        width: 100%;
+    }
+
+    .mission-top-right {
+        width: 100%;
+    }
+
+}
+
+@media (max-width:400px) {
+    .mission-bottom {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mission-bottom-left {
+        width: 100%;
+    }
+
+    .mission-bottom-right {
+        width: 100%;
+    }
+
+}
+
+/* Donation_page */
+.impact-statement {
+    text-align: center;
+    padding: 50px 75px 0px 75px;
+}
+
+.impact-statement h1 {
+    font-family: Montserrat;
+    color: #273044;
+    font-size: 1.9rem;
+    padding-bottom: 5px;
+}
+
 .impact-statement p {
-    font-size: 1.1em;
-    text-align: center;
-    margin-top: 10px;
+    font-family: Poppins;
+    font-weight: 800;
+    font-size: 1rem;
+}
+@media (max-width:768px) {
+    .impact-statement {
+        padding: 50px 25px 0px 25px;
+    }
+}
+.success-stories {
+    padding: 50px 75px;
 }
 
-/* Success Stories */
-.success-stories {
-    text-align: center;
+.success-stories h1 {
+    font-family: Montserrat;
+    color: #273044;
+    font-size: 1.9rem;
+    padding-bottom: 20px;
 }
 
 .stories-container {
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap;
     justify-content: center;
-    margin-top: 20px;
+    gap: 31px;
 }
 
-.story {
-    flex: 1;
-    padding: 10px;
-    background: #e8f4f8;
-    border-radius: 8px;
-    text-align: left;
+.story-card {
+    width: 215px;
+    height: 250px;
+    position: relative;
 }
 
-.story h3 {
-    color: #009688;
+.story-card img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    border-radius: 10px;
 }
 
-/* Donation Breakdown */
-.donation-breakdown ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
-}
-
-.donation-breakdown ul li {
-    padding: 10px;
-    font-size: 1.1em;
-}
-
-/* Donor Recognition */
-.donor-recognition ul {
-    list-style-type: none;
-    text-align: center;
-}
-
-.donor-recognition p {
-    margin-bottom: 10px;
-}
-
-/* Call-to-Action */
-.cta {
-    text-align: center;
-    background-color: #009688;
+.story-card h3 {
+    display: none;
+    font-size: 1.3rem;
+    font-family: 'Montserrat';
+    font-weight: 700;
     color: #fff;
-    padding: 30px;
-    border-radius: 8px;
 }
 
-.cta h2 {
-    margin-bottom: 10px;
+.story-card p {
+    display: none;
+    color: white;
+    font-size: 1rem;
+    font-family: 'MontserratLight';
+    font-weight: 700;
 }
 
-.donate-btn {
-    padding: 10px 20px;
-    font-size: 1.2em;
-    color: #fff;
-    background-color: #e91e63;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
+.story-card-content {
+    position: absolute;
+    background: linear-gradient(rgba(5, 56, 120, .5), rgba(3, 44, 114, .5));
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    height: 0%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    border-radius: 10px;
+    transition: .5s ease-in-out
 }
 
-.donate-btn:hover {
-    background-color: #c2185b;
+.story-card:hover .story-card-content {
+    height: 100%;
+}
+
+.story-card:hover .story-card-content h3 {
+    display: block;
+}
+
+.story-card:hover .story-card-content p {
+    display: block;
+}
+@media (max-width:768px) {
+    .success-stories {
+        padding: 50px 35px;
+    }
+}
+@media (max-width:400px) {
+    .success-stories {
+        padding: 50px 5px;
+    }
+    .story-card {
+        width: 275px;
+        height: 350px;
+        position: relative;
+    }
+    
+}
+.donation-breakdown{
+    padding: 0px 75px;
+}
+
+.donation-breakdown h2{
+    font-family: 'Montserrat';
+    font-size: 1.72rem;
+    padding-bottom: 15px;
+    color: #273044;
+}
+.breakdown-cards{
+    display: flex;
+    width: 100%;
+}
+
+.breakdown-card h3{
+    padding: 12px;
+    font-family: 'Montserrat';
+    font-size: 1.2rem;
+    color: #273044;
+}
+.breakdown-card p{
+    padding: 12px;
+    font-family:Poppins;
+    font-size: 1rem;
+    font-weight: 900;
+}
+.donor-recognition{
+    padding: 20px 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.donor-recognition h2{
+    font-family: 'Montserrat';
+    font-size: 1.7rem;
+    padding-bottom: 10px;
+    color: #273044;
+}
+.donor-recognition p{
+    font-family:Poppins;
+    font-size: 1.2rem;
+    font-weight: 900;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.donor-list{
+    display: flex;
+    gap: 40px;
+}
+.donor-list span{
+font-family: 'Montserrat';
+font-weight: 900;
+font-size: 1.2rem;
+color: #273044;
+}
+@media (max-width:768px) {
+    .donation-breakdown{
+        padding: 0px 25px;
+    }
+    .breakdown-cards{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .donor-list{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+}
+
+.cta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.cta h2{
+    font-family: 'Montserrat';
+    color: #273044;
+}
+@media (max-width:768px) {
+    .cta{
+        text-align: center;
+    }
 }
