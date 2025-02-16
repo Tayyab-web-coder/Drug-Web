@@ -833,3 +833,96 @@ color: #c9eef8;
     z-index: 2;
 }
 
+h1, h2 {
+    color: #333;
+    text-align: center;
+}
+
+section {
+    padding: 20px;
+    margin: 20px 0;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Impact Statement */
+.impact-statement p {
+    font-size: 1.1em;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Success Stories */
+.success-stories {
+    text-align: center;
+}
+
+.stories-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.story {
+    flex: 1;
+    padding: 10px;
+    background: #e8f4f8;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.story h3 {
+    color: #009688;
+}
+
+/* Donation Breakdown */
+.donation-breakdown ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.donation-breakdown ul li {
+    padding: 10px;
+    font-size: 1.1em;
+}
+
+/* Donor Recognition */
+.donor-recognition ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+.donor-recognition p {
+    margin-bottom: 10px;
+}
+
+/* Call-to-Action */
+.cta {
+    text-align: center;
+    background-color: #009688;
+    color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.cta h2 {
+    margin-bottom: 10px;
+}
+
+.donate-btn {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #e91e63;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.donate-btn:hover {
+    background-color: #c2185b;
+}
